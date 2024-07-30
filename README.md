@@ -39,7 +39,7 @@ If all the dependencies are in place running the build is as easy as:
 In order to make the image bootable on a Chromebook with depthcharge bootloader we
 need to set the correct GPT attributes on our kernel boot partition.
 This is explained in detail in
-[ChromiumOS > Reference > Disk Format] (https://www.chromium.org/chromium-os/developer-library/reference/device/disk-format/).
+[ChromiumOS > Reference > Disk Format](https://www.chromium.org/chromium-os/developer-library/reference/device/disk-format/).
 
 ```
 # sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstall-desktop-arm64+corsola.img
