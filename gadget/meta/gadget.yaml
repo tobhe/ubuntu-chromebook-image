@@ -1,0 +1,10 @@
+volumes:
+  chromebook-mt8186:
+    schema: gpt
+    bootloader: grub
+    structure:
+      - name: Submarine
+        type: FE3A2A5D-4F32-41A7-B725-ACCC3285A309
+        size: 64M
+        content:
+          - image: submarine-a64.kpart
