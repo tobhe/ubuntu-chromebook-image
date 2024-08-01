@@ -23,7 +23,7 @@ Finally we also need to fetch or build the bootloader binary.
 The easiest way to get it is:
 
 ```
-$ wget -P gadget https://tobhe.de/ubuntu/submarine-a64.kpart -O gadget/
+$ wget -P gadget https://tobhe.de/ubuntu/submarine-a64.kpart
 ```
 
 ## Building
