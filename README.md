@@ -14,7 +14,7 @@ The following chromebooks are known to work:
 
 The following packages need to be installed:
 ```
-# apt install make sgdisk wget
+# apt install make gdisk wget
 
 # snap install --classic ubuntu-image
 ```
