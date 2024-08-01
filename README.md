@@ -1,8 +1,6 @@
-# Ubuntu Images for Mediatek MT8186 Chromebooks
+# Ubuntu Images for arm64 Chromebooks
 
-### Warning
-
-All of this is in a very experimental state and not at all
+**Warning:** All of this is in a very experimental state and not at all
 officially supported by Ubuntu.
 
 ## Tested Devices
