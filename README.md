@@ -31,7 +31,7 @@ $ wget -P gadget https://tobhe.de/ubuntu/submarine-a64.kpart -O gadget/
 If all the dependencies are in place running the build is as easy as:
 
 ```
-# ubuntu-image -i 8G chromebook-corsola.yaml
+# ubuntu-image classic -i 8G chromebook-corsola.yaml
 ```
 
 In order to make the image bootable on a Chromebook with depthcharge bootloader we
