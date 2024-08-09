@@ -24,3 +24,8 @@ jobs:
         with:
           name: ubuntu-24.10-preinstall-desktop-arm64+corsola.img
           overwrite: true
+
+      - name: Upload logs
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          path: /tmp/ubuntu-image-*/**/*.log
