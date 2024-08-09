@@ -13,8 +13,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install ubuntu-image
-        run: sudo snap install --classic ubuntu-image
+      - name: Install ubuntu-image dependencies
+        run: |
+          sudo apt install -y qemu-user-static
+          sudo snap install --classic ubuntu-image
 
       - name: Run ubuntu-image
         run: |
