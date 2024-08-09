@@ -30,4 +30,4 @@ jobs:
       - uses: actions/upload-artifact@v4.3.6
         if: always()
         with:
-          path: /tmp/ubuntu-image-*/chroot/debootstrap/debootstrap.log
+          path: build/chroot/debootstrap/debootstrap.log
