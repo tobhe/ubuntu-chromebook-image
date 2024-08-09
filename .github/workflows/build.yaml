@@ -2,6 +2,10 @@ name: Automated image builds
 on:
   schedule:
     - cron: '0 0 * * *'  # Once a day at midnight. 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 jobs:
   build:
