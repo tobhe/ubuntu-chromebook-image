@@ -1,0 +1,22 @@
+name: Automated image builds
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Once a day at midnight. 
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install ubuntu-image
+        run: sudo snap install ubuntu-image
+
+      - name: Rub ubuntu-image
+        run: sudo ubuntu-image classic chromebook-corsola.yaml
+
+      - name: Upload image
+        uses: actions/upload-artifact@v4.3.6
+        with:
+          name: ubuntu-24.10-preinstall-desktop-arm64+corsola.img
+          overwrite: true
