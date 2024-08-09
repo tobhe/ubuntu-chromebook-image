@@ -20,6 +20,7 @@ jobs:
 
       - name: Run ubuntu-image
         run: |
+          gpg-agent --daemon --default-cache-ttl 7200
           mkdir build
           sudo ubuntu-image -w build classic chromebook-corsola.yaml
 
