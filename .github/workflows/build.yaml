@@ -17,7 +17,9 @@ jobs:
         run: sudo snap install --classic ubuntu-image
 
       - name: Run ubuntu-image
-        run: sudo ubuntu-image classic chromebook-corsola.yaml
+        run: |
+          mkdir build
+          sudo ubuntu-image -w build classic chromebook-corsola.yaml
 
       - name: Upload image
         uses: actions/upload-artifact@v4.3.6
