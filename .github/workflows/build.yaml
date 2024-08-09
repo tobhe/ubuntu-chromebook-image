@@ -16,7 +16,7 @@ jobs:
       - name: Install ubuntu-image
         run: sudo snap install --classic ubuntu-image
 
-      - name: Rub ubuntu-image
+      - name: Run ubuntu-image
         run: sudo ubuntu-image classic chromebook-corsola.yaml
 
       - name: Upload image
