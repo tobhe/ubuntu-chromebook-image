@@ -30,8 +30,8 @@ jobs:
       - name: Upload image
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: ubuntu-24.10-preinstall-desktop-arm64+corsola.img
-          overwrite: true
+          name: ubuntu-24.10-preinstall-desktop-arm64+corsola
+          path: ubuntu-24.10-preinstall-desktop-arm64+corsola.img
 
       - uses: actions/upload-artifact@v4.3.6
         if: always()
