@@ -15,12 +15,17 @@ jobs:
 
       - name: Install ubuntu-image dependencies
         run: |
-          sudo apt install -y qemu-user-static
+          sudo apt install -y gdisk qemu-user-static wget
           sudo snap install --classic ubuntu-image
 
+      - name: Fetch submarine
+        run: wget -P gadget https://files.tobhe.de/ubuntu/submarine-a64.kpart
+
       - name: Run ubuntu-image
-        run: |
-           sudo ubuntu-image --debug classic chromebook-corsola.yaml
+        run: sudo ubuntu-image --verbose classic chromebook-corsola.yaml
+
+      - name: Fix partition flags
+        run: sudo sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstall-desktop-arm64+corsola.img
 
       - name: Upload image
         uses: actions/upload-artifact@v4.3.6
