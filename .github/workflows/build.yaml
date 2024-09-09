@@ -25,7 +25,7 @@ jobs:
         run: sudo ubuntu-image --verbose classic chromebook-corsola.yaml
 
       - name: Fix partition flags
-        run: sudo sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstall-desktop-arm64+corsola.img
+        run: sudo sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstall-desktop-arm64+corsola.img || true
 
       - name: Upload image
         uses: actions/upload-artifact@v4.3.6
