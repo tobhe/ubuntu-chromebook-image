@@ -16,7 +16,7 @@ jobs:
       - name: Install ubuntu-image dependencies
         run: |
           sudo apt install -y gdisk qemu-user-static wget
-          sudo snap install --classic ubuntu-image
+          sudo snap install --classic --channel=latest/edge ubuntu-image
 
       - name: Fetch submarine
         run: wget -P gadget https://files.tobhe.de/ubuntu/submarine-a64.kpart
