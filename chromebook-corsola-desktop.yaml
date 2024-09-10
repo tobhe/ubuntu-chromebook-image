@@ -46,6 +46,9 @@ customization:
   extra-ppas:
     - name: tobhe/chromebook
       keep-enabled: yes
+  manual:
+    touch-file:
+      - path: /etc/cloud/cloud-init.disabled
 artifacts:
   img:
     - name: ubuntu-24.10-preinstalled-desktop-arm64+corsola.img
