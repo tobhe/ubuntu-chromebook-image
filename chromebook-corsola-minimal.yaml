@@ -26,8 +26,6 @@ rootfs:
       - minimal
       - standard
 customization:
-  extra-snaps:
-    - name: snapd
   extra-packages:
     - name: ubuntu-corsola-settings
   extra-ppas:
