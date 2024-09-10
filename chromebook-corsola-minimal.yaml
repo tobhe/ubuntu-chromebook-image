@@ -25,6 +25,7 @@ rootfs:
     names:
       - minimal
       - standard
+      - cloud-image
 customization:
   cloud-init:
     user-data: |
