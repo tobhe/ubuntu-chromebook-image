@@ -1,0 +1,53 @@
+name: ubuntu-chromebook-corsola-desktop
+display-name: Ubuntu Preinstalled Desktop Chromebook Corsola
+revision: 0
+architecture: arm64
+series: oracular
+class: preinstalled
+kernel: linux-chromebook
+gadget:
+  url: "file://gadget"
+  type: "prebuilt"
+rootfs:
+  archive: ubuntu
+  components:
+    - main
+    - restricted
+    - universe
+    - multiverse
+  mirror: "http://ports.ubuntu.com/ubuntu-ports/"
+  sources-list-deb822: true
+  pocket: updates
+  seed:
+    urls:
+      - "git://git.launchpad.net/~ubuntu-core-dev/ubuntu-seeds/+git/"
+    branch: oracular
+    names:
+      - desktop
+      - desktop-minimal
+      - minimal
+      - standard
+customization:
+  extra-snaps:
+    - name: snapd
+    - name: gnome-42-2204
+      channel: stable/ubuntu-24.04
+    - name: gtk-common-themes
+      channel: stable/ubuntu-24.04
+    - name: firefox
+      channel: stable/ubuntu-24.04
+    - name: snap-store
+      channel: stable/ubuntu-24.04
+    - name: snapd-desktop-integration
+      channel: stable/ubuntu-24.04
+  extra-packages:
+    - name: ubuntu-corsola-settings
+    - name: language-pack-en-base
+  extra-ppas:
+    - name: tobhe/chromebook
+      keep-enabled: yes
+artifacts:
+  img:
+    - name: ubuntu-24.10-preinstalled-desktop-arm64+corsola.img
+  manifest:
+    name: ubuntu-24.10-preinstalled-desktop-arm64+corsola.manifest

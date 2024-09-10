@@ -21,17 +21,21 @@ jobs:
       - name: Fetch submarine
         run: wget -P gadget https://files.tobhe.de/ubuntu/submarine-a64.kpart
 
-      - name: Run ubuntu-image
-        run: sudo ubuntu-image --verbose classic chromebook-corsola.yaml
+      - name: Build minimal
+        run: |
+           sudo ubuntu-image --verbose classic chromebook-corsola-minimal.yaml
+           sudo sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstalled-minimal-arm64+corsola.img || true
 
-      - name: Fix partition flags
-        run: sudo sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstall-desktop-arm64+corsola.img || true
+      - name: Build desktop
+        run: |
+           sudo ubuntu-image --verbose classic chromebook-corsola-desktop.yaml
+           sudo sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstalled-desktop-arm64+corsola.img || true
 
-      - name: Upload image
+      - name: Upload images
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: ubuntu-24.10-preinstall-desktop-arm64+corsola
-          path: ubuntu-24.10-preinstall-desktop-arm64+corsola.img
+          name: ubuntu-24.10-corsola-images
+          path: ubuntu-24.10-preinstalled-*-arm64+corsola.img
 
       - uses: actions/upload-artifact@v4.3.6
         if: always()

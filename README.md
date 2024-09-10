@@ -31,7 +31,7 @@ $ wget -P gadget https://tobhe.de/ubuntu/submarine-a64.kpart
 If all the dependencies are in place running the build is as easy as:
 
 ```
-# ubuntu-image classic -i 8G chromebook-corsola.yaml
+# ubuntu-image classic -i 8G chromebook-corsola-desktop.yaml
 ```
 
 In order to make the image bootable on a Chromebook with depthcharge bootloader we
@@ -40,5 +40,5 @@ This is explained in detail in
 [ChromiumOS > Reference > Disk Format](https://www.chromium.org/chromium-os/developer-library/reference/device/disk-format/).
 
 ```
-# sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstall-desktop-arm64+corsola.img
+# sgdisk -A 1:or:11f000000000000 ubuntu-24.10-preinstalled-desktop-arm64+corsola.img
 ```
