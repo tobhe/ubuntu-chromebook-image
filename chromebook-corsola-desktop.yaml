@@ -25,6 +25,7 @@ rootfs:
     names:
       - desktop
       - desktop-minimal
+      - desktop-minimal-default-languages
       - minimal
       - standard
 customization:
@@ -42,7 +43,6 @@ customization:
       channel: stable/ubuntu-24.04
   extra-packages:
     - name: ubuntu-corsola-settings
-    - name: language-pack-en-base
   extra-ppas:
     - name: tobhe/chromebook
       keep-enabled: yes
