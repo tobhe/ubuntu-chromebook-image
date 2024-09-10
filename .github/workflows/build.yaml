@@ -15,7 +15,7 @@ jobs:
 
       - name: Install ubuntu-image dependencies
         run: |
-          sudo apt install -y gdisk qemu-user-static wget
+          sudo apt install -y gdisk qemu-user-static wget unsquashfs
           sudo snap install --classic --channel=latest/edge ubuntu-image
 
       - name: Fetch submarine
