@@ -15,7 +15,7 @@ jobs:
 
       - name: Install ubuntu-image dependencies
         run: |
-          sudo apt install -y gdisk qemu-user-static wget squashfs-tools
+          sudo apt install -y gdisk qemu-user-static wget
           sudo snap install --classic --channel=latest/edge ubuntu-image
 
       - name: Fetch submarine
@@ -29,8 +29,8 @@ jobs:
       - name: Upload images
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: ubuntu-24.10-corsola-images
-          path: ubuntu-24.10-preinstalled-*-arm64+corsola.img
+          name: ubuntu-24.10-corsola-image
+          path: ubuntu-24.10-preinstall-desktop-arm64+corsola.img
 
       - uses: actions/upload-artifact@v4.3.6
         if: always()
