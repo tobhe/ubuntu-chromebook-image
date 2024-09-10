@@ -26,8 +26,20 @@ rootfs:
       - minimal
       - standard
 customization:
+  cloud-init:
+    user-data: |
+      #cloud-config
+      chpasswd:
+      expire: true
+      users:
+        - name: ubuntu
+          password: ubuntu
+          type: text
+  extra-snaps:
+    - name: snapd
   extra-packages:
     - name: ubuntu-corsola-settings
+    - name: snapd
   extra-ppas:
     - name: tobhe/chromebook
       keep-enabled: yes
