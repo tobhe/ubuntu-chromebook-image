@@ -29,7 +29,7 @@ jobs:
       - name: Upload images
         uses: actions/upload-artifact@v4.3.6
         with:
-          name: ubuntu-24.10-corsola-image
+          name: ubuntu-24.10-preinstalled-desktop-arm64+corsola
           path: ubuntu-24.10-preinstalled-desktop-arm64+corsola.img
 
       - uses: actions/upload-artifact@v4.3.6
