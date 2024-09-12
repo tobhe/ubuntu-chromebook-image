@@ -33,6 +33,8 @@ customization:
     - name: snapd
     - name: gnome-42-2204
       channel: stable/ubuntu-24.04
+    - name: gnome-46-2404
+      channel: stable/ubuntu-24.04
     - name: gtk-common-themes
       channel: stable/ubuntu-24.04
     - name: firefox
